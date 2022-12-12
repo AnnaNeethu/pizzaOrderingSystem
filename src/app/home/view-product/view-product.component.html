@@ -1,0 +1,41 @@
+ <!-- Responsive navbar-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a class="navbar-brand" href="#!" style="font-size: 40px;">
+           <img src="https://i.postimg.cc/FFnrcC4d/icon.jpg" alt="" style="width:40px; border-radius: 20px; margin-bottom: 5px;">
+            FoodCorner
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <a class="nav-link active" aria-current="page" href="home/dashboard" style="font-size: 20px;">Home</a>
+                <a class="nav-link active" href="#!"style="font-size: 20px;">Food</a>
+                <a class="nav-link active" href="home/login" style="font-size: 20px;">Logout</a>
+
+            </div>
+        </div>
+        <a class="btn" href="home/cart">
+            <i class="fa-sharp fa-solid fa-cart-shopping" style="font-size: 20px; color: rgb(245, 238, 238);"></i>
+            <div class="badge bg-warning" style="font-size: 10px;">{{totalItem}}</div>
+        </a>
+    </div>
+</nav>
+
+<div class="container" id="d1">
+    <img id="img1" src="{{foodDetails.image}}" alt="">
+
+<div class="details">
+    <div class="header">
+        <div class="name" style="font-size: 30px;"><strong>{{foodDetails.foodName}}</strong></div>
+        <div class="favorite{{foodDetails.favorite?'':'not'}}">♥</div>
+        <div class="price">₹ {{foodDetails.price}}</div>
+        <div class="rating">Rating : {{foodDetails.rating}}</div>
+    </div>  
+    <button (click)="addToCart(foodDetails)" class="btn " id="cart">Add to Cart</button>
+</div>
+</div>
+
+
+
+
+

@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id":1,
+      "foodName": "Veg Noodles",
+      "price": 250,
+      "quantity": "10",
+      "favorite":"true",
+      "rating":4.4,
+      "image": "https://i.postimg.cc/bvF3mg5V/noodles.jpg"
+    },
+    {
+      "id":2,
+      "foodName": "Chole Bhature",
+      "price": 150,
+      "quantity": "17",
+      "favorite":"true",
+      "rating":4.4,
+      "image": "https://i.postimg.cc/tgPYcCv0/cholebhature.jpg"
+    },
+    {
+      "id":3,
+      "foodName": "Veg Spicy Pizza",
+      "price": 280,
+      "quantity": "20",
+      "favorite":"false",
+      "rating":4.4,
+      "image": "https://i.postimg.cc/bY0FhxSr/pizza.webp"
+    },
+    {
+      "id":4,
+      "foodName": "Chicken Biriyani",
+      "price": 220,
+      "quantity": "10",
+      "favorite":"true",
+      "rating":4.4,
+      "image": "https://i.postimg.cc/YCHZ5t3c/biriyani.jpg"
+    },
+    {
+      "id":5,
+      "foodName": "Chicken Momoz",
+      "price": 130,
+      "quantity": "10",
+      "favorite":"true",
+      "rating":4.4,
+      "image": "https://i.postimg.cc/fT4rdM13/momo.webp"
+    },
+    {
+      "id":6,
+      "foodName": "Chicken Roll",
+      "price": 80,
+      "quantity": "50",
+      "favorite":"true",
+      "rating":4.1,
+      "image": "https://i.postimg.cc/RV5v7wzK/chickenroll.jpg"
+    },
+    {
+      "id":7,
+      "foodName": "Chicken Soup",
+      "price": 70,
+      "quantity": "20",
+      "favorite":"true",
+      "rating":4.1,
+      "image": "https://i.postimg.cc/vZ7FLKvd/chickensoup.webp"
+    },
+    {
+      "id":8,
+      "foodName": "Egg Roll",
+      "price": 60,
+      "quantity": "50",
+      "favorite":"true",
+      "rating":4.1,
+      "image": "https://i.postimg.cc/jjQx251P/eggroll.jpg"
+    },
+    {
+      "id":9,
+      "foodName": "Ham Sandwich",
+      "price": 150,
+      "quantity": "50",
+      "favorite":"true",
+      "rating":4.5,
+      "image": "https://i.postimg.cc/hGf5f3hn/hamsandwich.jpg"
+    },
+    {
+      "id":10,
+      "foodName": "Veg Fried Rice",
+      "price": 140,
+      "quantity": "50",
+      "favorite":"true",
+      "rating":4.5,
+      "image": "https://i.postimg.cc/3w83VhLB/vegrice.jpg"
+    }
+   
+  ],
+  "users": [
+    {
+      "name": "Anna",
+      "username": "anna",
+      "mob": "9633989197",
+      "password": "anna",
+      "id": 1
+    }
+  ]
+}

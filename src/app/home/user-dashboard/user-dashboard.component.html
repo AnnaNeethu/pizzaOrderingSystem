@@ -1,0 +1,71 @@
+ <!-- Responsive navbar-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a class="navbar-brand" href="#!" style="font-size: 40px;">
+           <img src="https://i.postimg.cc/FFnrcC4d/icon.jpg" alt="" style="width:40px; border-radius: 20px; margin-bottom: 5px;">
+            FoodCorner
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <a class="nav-link active" aria-current="page" href="home/dashboard" style="font-size: 20px;">Home</a>
+                <a class="nav-link active" href="#!"style="font-size: 20px;">Food</a>
+                <a class="nav-link active" href="home/login" style="font-size: 20px;">Logout</a>
+
+            </div>
+        </div>
+        <a class="btn" href="home/cart">>
+            <i class="fa-sharp fa-solid fa-cart-shopping" style="font-size: 20px; color: rgb(245, 238, 238);"></i>
+            <div class="badge bg-warning" style="font-size: 10px;">{{totalItem}}</div>
+        </a>
+    </div>
+</nav>
+
+
+<ul>
+    <li *ngFor="let food of foodList">
+       <a href="home/viewproduct/{{food.id}}">
+        <img src="{{food.image}}" alt="">
+        <div class="items">
+            <div class="name">
+                {{food.foodName}}
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <span class="favorite {{food.favorite?'':'not'}}">♥</span>
+        </div>
+        </div>
+        <div class="price">₹ {{food.price}}</div>
+       </a> 
+    </li>
+</ul>
+
+
+ <!-- Page Content-->
+ 
+    <!-- <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="d1">
+               
+                <div class="col mb-5" *ngFor="let food of foodList">
+                    <div class="card h-100"> -->
+                        <!-- Product image-->
+                        <!-- <img class="card-img-top" id="img1" src="{{food.image}}" alt="..." /> -->
+                        <!-- Product details-->
+                        <!-- <div class="card-body p-4">
+                            <div class="text-center">
+                                 Product name-->
+                                <!-- <h5 class="fw-bolder">{{food.foodName}}</h5> -->
+                                
+                                <!-- Product price-->
+                                <!-- <span> INR. {{food.price}}</span> -->
+                               
+                            <!-- </div> --> 
+                        <!-- </div> -->
+                        <!-- Product actions-->
+                        <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="http://localhost:4200/products/view-product/{{food.foodName}}">View Options</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->

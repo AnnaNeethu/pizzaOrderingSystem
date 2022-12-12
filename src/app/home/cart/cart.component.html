@@ -1,0 +1,89 @@
+ <!-- Responsive navbar-->
+ <!-- Responsive navbar-->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container px-5">
+        <a class="navbar-brand" href="#!" style="font-size: 40px;">
+           <img src="https://i.postimg.cc/FFnrcC4d/icon.jpg" alt="" style="width:40px; border-radius: 20px; margin-bottom: 5px;">
+            FoodCorner
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <a class="nav-link active" aria-current="page" href="home/dashboard" style="font-size: 20px;">Home</a>
+                <a class="nav-link active" href="#!"style="font-size: 20px;">Food</a>
+                <a class="nav-link active" href="home/login" style="font-size: 20px;">Logout</a>
+
+            </div>
+        </div>
+        <button class="btn" onclick="home/cart">
+            <i class="fa-sharp fa-solid fa-cart-shopping" style="font-size: 20px; color: rgb(245, 238, 238);"></i>
+            <div class="badge bg-warning" style="font-size: 10px;">{{totalItem}}</div>
+        </button>
+    </div>
+</nav>
+
+<ng-container *ngIf="foods.length!=0">
+    <div class="card-table">
+        <div class="cart-product">
+            <table class="table table-responsive">
+                <thead>
+                    <tr>
+                        <th>Sl. No</th>
+                        <th>Food Name</th>
+                        <th>Food Image</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr *ngFor="let food of foods;let i = index" >
+                        <td>{{i+1}}</td>
+                        <td>{{food.foodName}}</td>
+                        <td><img src="{{food.image}}" style="width: 120px; border-radius: 50px;" alt=""></td>
+                        <td>{{food.price}}</td>
+                        <td>{{i+1}}</td>
+                        <td>{{grandTotal}}</td>
+                        <td>
+                            <button (click)="removeItem(food)" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"></td>
+                        <td><button (click)="emptyCart()" class="btn btn-danger">Empty Cart</button></td>
+                        <td><button routerLink="/home/dashboard" class="btn btn-primary">Shop More</button></td>
+                        <td><button class="btn btn-success">Checkout</button></td>
+                        <td><strong>Grand Total : ₹{{grandTotal}}</strong></td>
+
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div>
+    <div class="checkout">
+        <div class="food-count">
+            {{foods.length}}
+        </div>
+        <div class="total-price">
+            {{foods.total}}
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="foods.length==0">
+    
+<div class="container">
+    <div class="card">
+        <h5 class="title" style="text-align: center;"><strong>My Cart</strong></h5>
+    </div>
+    <div class="center">
+        <img src="https://i.postimg.cc/jdc1Ftyv/cart.jpg" alt="">
+        <h4>Your Cart is empty</h4>
+        <h6>Add food to it</h6>
+        <button class="btn btn-primary">
+            <a href="home/dashboard" style="color:azure">
+        Add Food</a></button>
+    </div>
+</div>
+</ng-container>
+

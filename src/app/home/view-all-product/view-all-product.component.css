@@ -1,0 +1,21 @@
+.img-fluid{
+    width: 900px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    /* border-radius:50px ; */
+}
+#img1{
+    width: 250px;
+    height: 200px;
+    /* border-radius: 80px; */
+}
+/* .py-5{
+    background-color: darkkhaki;
+} */
+#d1{
+    /* background: darkkhaki; */
+    background-size:cover;
+    margin-top: 0%;
+
+}
